@@ -1,0 +1,20 @@
+data_validation:
+  root_dir: data/raw
+  file_name: winequality-red.csv
+
+data_transformation:
+  root_dir: data/raw
+  file_name: winequality-red.csv
+  output_path: data/processed
+
+model_trainer:
+  root_dir: data/model
+  train_data_path: data/processed/train.csv
+  test_data_path: data/processed/test.csv
+  model_name: model.joblib
+
+model_evaluation:
+  root_dir: data/model_evaluation
+  test_data_path: data/processed/test.csv
+  model_path: data/model/model.joblib
+  metric_file_name: data/model_evaluation/metrics.json
